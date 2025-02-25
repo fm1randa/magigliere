@@ -3,9 +3,12 @@ import { CharacterList } from "@/components/character-list";
 import { charactersOptions } from "@/characters";
 import { getQueryClient } from "@/get-query-client";
 import { HydrationBoundary } from "@tanstack/react-query";
+import { useFilters } from "@/stores/filters";
 
 export default function Characters() {
   const queryClient = getQueryClient();
+
+  const { isStaff, isStudent, toggleIsStaff, toggleIsStudent } = useFilters();
 
   void queryClient.prefetchQuery(charactersOptions);
 
@@ -15,12 +18,16 @@ export default function Characters() {
         <h1 className="text-xl font-bold">Characters</h1>
         <div className="flex gap-2">
           <label className="flex gap-1">
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              checked={isStudent}
+              onChange={toggleIsStudent}
+            />
             Students
           </label>
 
           <label className="flex gap-1">
-            <input type="checkbox" />
+            <input type="checkbox" checked={isStaff} onChange={toggleIsStaff} />
             Staff
           </label>
         </div>

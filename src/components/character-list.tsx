@@ -3,9 +3,22 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { charactersOptions } from "../characters";
 import Link from "next/link";
+import { useFilters } from "@/stores/filters";
 
 export function CharacterList() {
-  const { data } = useSuspenseQuery(charactersOptions);
+  const { isStaff, isStudent } = useFilters();
+  const { data } = useSuspenseQuery({
+    ...charactersOptions,
+    select: (data) => {
+      return data?.filter((character) => {
+        if (isStaff && isStudent)
+          return character.hogwartsStaff || character.hogwartsStudent;
+        if (isStaff) return character.hogwartsStaff;
+        if (isStudent) return character.hogwartsStudent;
+        return true;
+      });
+    },
+  });
 
   return (
     <ul>
