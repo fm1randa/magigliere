@@ -68,7 +68,7 @@ I developed everything ~6 hours.
 With more time, I would:
 
 - Add responsive mobile UI
-- Remove unnecessary scroll from characters page
+- Remove unnecessary horizontal scroll from characters page
 - Implement better filtering
 - Add a visual indicator for favorite characters on the character list
 - Improve preferences page UI with house images
