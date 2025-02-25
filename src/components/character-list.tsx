@@ -4,6 +4,7 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { charactersOptions } from "../characters";
 import Link from "next/link";
 import { useFilters } from "@/stores/filters";
+import { CharacterCard } from "./character-card";
 
 export function CharacterList() {
   const { isStaff, isStudent } = useFilters();
@@ -21,16 +22,16 @@ export function CharacterList() {
   });
 
   return (
-    <ul>
+    <div className="grid grid-cols-5 gap-y-10 mt-5">
       {data?.map((character, index) => (
         <Link
           href={`/character/${character.id}`}
-          key={`${character.name}-${index}`}
+          key={`${character.id}`}
           className="block w-fit hover:underline"
         >
-          <li>{character.name}</li>
+          <CharacterCard id={character.id} />
         </Link>
       ))}
-    </ul>
+    </div>
   );
 }
