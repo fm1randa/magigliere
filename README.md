@@ -53,6 +53,8 @@ The characters page displays every Harry Potter character arranged alphabeticall
 
 The preferences page is a simple page where the user can select their favorite house: Gryffindor, Slytherin, Hufflepuff, or Ravenclaw.
 
+Everything was done in ~6 hours.
+
 #### Stack
 
 - **NextJS** – Simplify the development and deployment.
