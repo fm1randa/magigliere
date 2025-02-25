@@ -1,6 +1,7 @@
 import { Providers } from "@/components/providers";
 import type { Metadata } from "next";
-import Link from "next/link";
+import "./globals.css";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Magigliere",
@@ -14,14 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"antialiased"}>
-        <h1> Magigliere </h1>
-        <p> A Harry Potter hub </p>
-        <nav>
-          <Link href={"/"}> Home </Link>
-          <Link href={"/characters"}> Characters </Link>
-          <Link href={"/profile"}> My profile </Link>
-        </nav>
+      <body className="antialiased">
+        <header className="mb-2 flex">
+          <div>
+            <h1 className="text-2xl"> Magigliere </h1>
+            <p> A Harry Potter hub </p>
+          </div>
+          <Navbar />
+        </header>
         <hr />
         <main>
           <Providers>{children}</Providers>

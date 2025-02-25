@@ -11,7 +11,18 @@ export default function Characters() {
 
   return (
     <>
-      <h1>Characters</h1>
+      <div className="flex flex-row">
+        <h1>Characters</h1>
+        <label>
+          <input type="checkbox" />
+          Students
+        </label>
+
+        <label>
+          <input type="checkbox" />
+          Staff
+        </label>
+      </div>
       <HydrationBoundary>
         <CharacterList />
       </HydrationBoundary>
