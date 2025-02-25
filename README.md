@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Magigliere
 
-## Getting Started
+A Harry Potter hub – Filipe Miranda's Prosigliere CC solution.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/fm1randa/magigliere
+cd magigliere
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Dev mode
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Production mode
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Approach
 
-To learn more about Next.js, take a look at the following resources:
+### Challenge requirements
+The challenge consists in build a Harry Potter-themed app using React (with TypeScript if possible) that displays characters and spells from the Harry Potter API. Features include:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+	1.	List of characters, students, and staff.
+	2.	Character detail page.
+	3.	Navigation between views.
+	4.	Option to favorite characters and set a preferred house (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
+	5.	Aesthetic design with appropriate colors and fonts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app should be responsive, well-structured, and use proper React and TypeScript practices.
 
-## Deploy on Vercel
+### How it was tackled
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A NextJS app with Typescript and TailwindCSS was created. All the requirements were implemented including a search feature and student/staff filter.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Pages
+
+- Home
+- Characters
+  - Character [id]
+- Preferences
+
+The home is a landing page that has an action button to direct user to the characters page.
+
+The characters page renders every Harry Potter character ordering by the favorites alphabetically. It includes a search bar and a student and staff filters. When the user clicks on the character card, the app will render a page with all information available about the selected char.
+
+The preferences page is a simple page where the user can switch its favorite house between Gryffindor, Slytherin, Hufflepuff, Ravenclaw.
+
+#### Stack
+
+- **NextJS** – Simplify the development and deployment.
+- **TailwindCSS** - Get fast styles with built-in classes and easy custom theme.
+- **TanStack Query** - Easily fetch and manage data.
+- **Zustand** - Create straightforward global states.
+- **@uidotdev/usehooks (useDebounce only)** - Utility hooks – effortlessly debounce char search.
+
+## What would I do next
+
+With more time, I would:
+
+- Implement better filtering
+- Add visual indicator for favorite characters on the character list
+- Improve preferences page UI with house images
+- Change UI according to the chosen house.
+- Add microinteractions with Harry Potter effects.
+- Improve performance
