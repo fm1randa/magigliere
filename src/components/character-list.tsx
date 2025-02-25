@@ -31,7 +31,7 @@ export function CharacterList() {
 
   return (
     <div className="grid grid-cols-5 gap-y-10 mt-5">
-      {data?.map((character, index) => (
+      {data?.map((character) => (
         <Link
           href={`/character/${character.id}`}
           key={`${character.id}`}

@@ -9,7 +9,7 @@ export function SearchInput(
     <div className="relative">
       <input
         {...props}
-        className={`bg-dark-gray font-normal text-sm rounded-full outline-none pl-3 pr-9 pt-1 pb-1 w-[300] ${props.className || ""}`}
+        className={`bg-dark-gray font-normal text-sm rounded-full outline-none pl-3 pr-9 pt-1 pb-1 w-[300px] ${props.className || ""}`}
         placeholder={props.placeholder || "Search"}
         value={query}
         onChange={(e) => setQuery(e.target.value)}

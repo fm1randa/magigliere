@@ -83,7 +83,7 @@ export function CharacterInfo() {
           title={data?.actor}
           width={150}
           height={150}
-          className="rounded-full mr-10 w-[150] h-[150]"
+          className="rounded-full mr-10 w-[150px] h-[150px]"
         />
       )}
       <h1 className="text-xl font-bold font-harry-beast-display text-golden-ochre">

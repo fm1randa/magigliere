@@ -22,7 +22,7 @@ export function CharacterCard({ id }: { id: string }) {
         src={data.image === "" ? UnknownChar : data.image}
         width={150}
         height={150}
-        className="h-[150] object-cover rounded-md"
+        className="h-[150px] object-cover rounded-md"
         title={`${data.actor === "" ? "Unknown actor" : data.actor} as ${data.name}`}
       />
       <h2 className="text-sm font-bold text-golden-ochre">{data.name}</h2>

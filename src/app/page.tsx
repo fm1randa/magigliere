@@ -8,7 +8,7 @@ export default function Home() {
           Wingardium Hello World-sa! ⚡
         </p>
         <Link href="/characters" className="hover:underline">
-          <button className="bg-deep-burgundy text-white p-1 rounded-md w-[200] h-[50]">
+          <button className="bg-deep-burgundy text-white p-1 rounded-md w-[200px] h-[50px]">
             Explore HP characters
           </button>
         </Link>
