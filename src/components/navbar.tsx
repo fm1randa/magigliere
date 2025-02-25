@@ -6,9 +6,11 @@ import { usePathname } from "next/navigation";
 export function Navbar() {
   const pathname = usePathname();
   const getClassnames = (path: string) =>
-    path === pathname ? "underline hover:underline" : "hover:underline";
+    path === pathname
+      ? "underline hover:underline h-fit"
+      : "hover:underline h-fit";
   return (
-    <nav className="flex gap-1 ml-auto mr-2">
+    <nav className="flex gap-4 ml-auto mr-2">
       <Link href={"/"} className={getClassnames("/")}>
         Home
       </Link>
