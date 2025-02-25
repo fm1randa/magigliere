@@ -26,19 +26,19 @@ npm start
 ## Approach
 
 ### Challenge requirements
-The challenge consists in build a Harry Potter-themed app using React (with TypeScript if possible) that displays characters and spells from the Harry Potter API. Features include:
+The challenge is building a Harry Potter-themed app using React (with TypeScript if possible) that displays characters and spells from the Harry Potter API. Features include:
 
-	1.	List of characters, students, and staff.
-	2.	Character detail page.
-	3.	Navigation between views.
-	4.	Option to favorite characters and set a preferred house (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
-	5.	Aesthetic design with appropriate colors and fonts.
+ 1. List of characters, students, and staff.
+ 2. Character detail page.
+ 3. Navigation between views.
+ 4. Option to favorite characters and set a preferred house (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
+ 5. Aesthetic design with appropriate colors and fonts.
 
-The app should be responsive, well-structured, and use proper React and TypeScript practices.
+The app should be responsive and well-structured and use proper React and TypeScript practices.
 
 ### How it was tackled
 
-A NextJS app with Typescript and TailwindCSS was created. All the requirements were implemented including a search feature and student/staff filter.
+I created a NextJS app with Typescript and TailwindCSS and implemented all the requirements, including a search feature and student/staff filter.
 
 #### Pages
 
@@ -47,16 +47,16 @@ A NextJS app with Typescript and TailwindCSS was created. All the requirements w
   - Character [id]
 - Preferences
 
-The home is a landing page that has an action button to direct user to the characters page.
+The home is a landing page with an action button directing users to the characters page.
 
-The characters page renders every Harry Potter character ordering by the favorites alphabetically. It includes a search bar and a student and staff filters. When the user clicks on the character card, the app will render a page with all information available about the selected char.
+The characters page displays every Harry Potter character arranged alphabetically by favorite. It includes a search bar and student and staff filters. When the user clicks on a character card, the app renders a page with all the information available about the selected character.
 
-The preferences page is a simple page where the user can switch its favorite house between Gryffindor, Slytherin, Hufflepuff, Ravenclaw.
+The preferences page is a simple page where the user can select their favorite house: Gryffindor, Slytherin, Hufflepuff, or Ravenclaw.
 
 #### Stack
 
 - **NextJS** – Simplify the development and deployment.
-- **TailwindCSS** - Get fast styles with built-in classes and easy custom theme.
+- **TailwindCSS** - Get fast styles with built-in classes and an easy custom theme.
 - **TanStack Query** - Easily fetch and manage data.
 - **Zustand** - Create straightforward global states.
 - **@uidotdev/usehooks (useDebounce only)** - Utility hooks – effortlessly debounce char search.
@@ -66,8 +66,8 @@ The preferences page is a simple page where the user can switch its favorite hou
 With more time, I would:
 
 - Implement better filtering
-- Add visual indicator for favorite characters on the character list
+- Add a visual indicator for favorite characters on the character list
 - Improve preferences page UI with house images
-- Change UI according to the chosen house.
-- Add microinteractions with Harry Potter effects.
+- Change UI according to the chosen house
+- Add micro-interactions with Harry Potter effects
 - Improve performance
