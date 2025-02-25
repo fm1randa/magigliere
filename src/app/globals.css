@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-deep-burgundy: #641e1e;
+  --color-golden-ochre: #c39a1c;
+  --color-walnut-brown: #3d2f22;
+  --color-slate-gray: #717679;
+  --color-soft-ivory: #efeee9;
+}
