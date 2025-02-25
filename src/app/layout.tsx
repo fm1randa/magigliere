@@ -1,5 +1,4 @@
 import { Providers } from "@/components/providers";
-import { QueryClient } from "@tanstack/react-query";
 import type { Metadata } from "next";
 import Link from "next/link";
 

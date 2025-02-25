@@ -4,13 +4,13 @@ const URL = "https://hp-api.onrender.com/api";
 
 const route = (path: TemplateStringsArray) => `${URL}${path}`;
 
-interface Wand {
+export interface Wand {
   wood: string;
   core: string;
   length: number;
 }
 
-interface Character {
+export interface Character {
   id: string;
   name: string;
   alternate_names: string[];
