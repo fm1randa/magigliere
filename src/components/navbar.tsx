@@ -17,8 +17,8 @@ export function Navbar() {
       <Link href={"/characters"} className={getClassnames("/characters")}>
         Characters
       </Link>
-      <Link href={"/profile"} className={getClassnames("/profile")}>
-        My profile
+      <Link href={"/preferences"} className={getClassnames("/preferences")}>
+        Preferences
       </Link>
     </nav>
   );

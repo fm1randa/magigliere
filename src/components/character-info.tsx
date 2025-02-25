@@ -1,6 +1,7 @@
 "use client";
 
 import { Character, charactersOptions, Wand } from "@/characters";
+import capitalize from "@/utils/capitalize";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { ValueOf } from "next/dist/shared/lib/constants";
 import Image from "next/image";
@@ -8,10 +9,6 @@ import { useParams } from "next/navigation";
 
 function splitWords(str: string) {
   return str.split(" ");
-}
-
-function capitalize(str?: string) {
-  return str ? str.charAt(0).toUpperCase() + str.slice(1) : "";
 }
 
 function capitalizeWords(str: string) {
