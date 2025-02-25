@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface PreferencesStore {
   house: string | null;
@@ -8,17 +9,24 @@ interface PreferencesStore {
   isFavorite: (characterId: string) => boolean;
 }
 
-export const usePreferences = create<PreferencesStore>()((set, store) => ({
-  house: null,
-  setHouse: (house: string) => set({ house }),
-  favorites: [],
-  toggleFavorite: (characterId: string) =>
-    set((state) => ({
-      favorites: state.favorites.includes(characterId)
-        ? state.favorites.filter((id) => id !== characterId)
-        : [...state.favorites, characterId],
-    })),
-  isFavorite: (characterId: string) => {
-    return store().favorites.includes(characterId);
-  },
-}));
+export const usePreferences = create<PreferencesStore>()(
+  persist(
+    (set, store) => ({
+      house: null,
+      setHouse: (house: string) => set({ house }),
+      favorites: [],
+      toggleFavorite: (characterId: string) =>
+        set((state) => ({
+          favorites: state.favorites.includes(characterId)
+            ? state.favorites.filter((id) => id !== characterId)
+            : [...state.favorites, characterId],
+        })),
+      isFavorite: (characterId: string) => {
+        return store().favorites.includes(characterId);
+      },
+    }),
+    {
+      name: "preferences",
+    }
+  )
+);
