@@ -5,13 +5,21 @@ import { charactersOptions } from "../characters";
 import Link from "next/link";
 import { useFilters } from "@/stores/filters";
 import { CharacterCard } from "./character-card";
+import { useDebounce } from "@uidotdev/usehooks";
 
 export function CharacterList() {
-  const { isStaff, isStudent } = useFilters();
+  const { isStaff, isStudent, query } = useFilters();
+  const debouncedQuery = useDebounce(query, 300);
   const { data } = useSuspenseQuery({
     ...charactersOptions,
     select: (data) => {
       return data?.filter((character) => {
+        if (
+          debouncedQuery !== "" &&
+          !character.name.toLowerCase().includes(debouncedQuery.toLowerCase())
+        ) {
+          return false;
+        }
         if (isStaff && isStudent)
           return character.hogwartsStaff || character.hogwartsStudent;
         if (isStaff) return character.hogwartsStaff;
