@@ -1,3 +1,8 @@
 export default function Home() {
-	return <div>Hello world!</div>;
+  return (
+    <>
+      <h1>Home</h1>
+      <p>Wingardium Hello-osa World! ⚡</p>
+    </>
+  );
 }
