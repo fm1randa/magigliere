@@ -75,15 +75,15 @@ export function CharacterInfo() {
   };
 
   return (
-    <>
+    <div className="flex flex-col gap-4 items-center justify-center grow">
       {data?.image && (
         <Image
           src={data?.image}
           alt={data?.actor ?? "Unknown actor"}
           title={data?.actor}
-          width={150}
-          height={150}
-          className="rounded-full mr-10 w-[150px] h-[150px]"
+          width={300}
+          height={300}
+          className="rounded-full w-[300px] h-[300px] object-cover"
         />
       )}
       <h1 className="text-xl font-bold font-harry-beast-display text-golden-ochre">
@@ -109,6 +109,6 @@ export function CharacterInfo() {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
