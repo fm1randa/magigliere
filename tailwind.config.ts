@@ -14,6 +14,13 @@ export default {
         "walnut-brown": "#3d2f22",
         "slate-gray": "#717679",
         "soft-ivory": "#efeee9",
+        "dark-blue": "rgb(0, 0, 27)",
+      },
+      fontFamily: {
+        "harry-p": ["HarryP", "sans-serif"],
+        "harry-beast-display": ["HarryBeastDisplay", "sans-serif"],
+        "harry-beast": ["HarryBeast", "sans-serif"],
+        "sofia-pro": ["Sofia Pro", "sans-serif"],
       },
     },
   },

@@ -8,4 +8,75 @@
   --color-walnut-brown: #3d2f22;
   --color-slate-gray: #717679;
   --color-soft-ivory: #efeee9;
+  --color-dark-blue: rgb(0, 0, 27);
+}
+
+@font-face {
+  font-family: 'HarryP';
+  src: url('/fonts/HarryP.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HarryBeastDisplay';
+  src: url('/fonts/harry-beast/HarryBeastDisplay.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HarryBeast';
+  src: url('/fonts/harry-beast/HarryBeastStandard.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofia-pro/normal_normal_300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofia-pro/normal_normal_400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofia-pro/normal_normal_500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofia-pro/normal_normal_600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofia-pro/normal_normal_700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofia-pro/normal_normal_800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofia-pro/normal_normal_900.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
 }

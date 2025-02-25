@@ -15,16 +15,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased p-4">
+      <body className="antialiased p-4 font-sofia-pro font-bold text-base bg-dark-blue text-soft-ivory w-svw h-svh flex flex-col">
         <header className="mb-2 flex">
           <div>
-            <h1 className="text-2xl font-bold"> Magigliere </h1>
-            <p> A Harry Potter hub </p>
+            <h1 className="text-6xl font-bold font-harry-p text-golden-ochre">
+              Magigliere
+            </h1>
+            <p className="font-harry-beast-display text-lg">
+              A Harry Potter hub
+            </p>
           </div>
           <Navbar />
         </header>
         <hr className="mb-3" />
-        <main>
+        <main className="flex flex-col grow">
           <Providers>{children}</Providers>
         </main>
       </body>

@@ -86,7 +86,9 @@ export function CharacterInfo() {
           className="rounded-full mr-10 w-[150] h-[150]"
         />
       )}
-      <h1 className="text-xl font-bold">{data?.name}</h1>
+      <h1 className="text-xl font-bold font-harry-beast-display text-golden-ochre">
+        {data?.name}
+      </h1>
       <ul>
         {Object.keys(data || {}).map((key) => {
           if (
@@ -99,7 +101,9 @@ export function CharacterInfo() {
           }
           return (
             <li key={key}>
-              <strong>{getFormattedKey(key)}:</strong>{" "}
+              <strong className="text-slate-gray">
+                {getFormattedKey(key)}:
+              </strong>{" "}
               {getParsedProperty(key as keyof Character)}
             </li>
           );
