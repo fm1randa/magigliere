@@ -13,6 +13,7 @@ export function CharacterList() {
         <Link
           href={`/character/${character.id}`}
           key={`${character.name}-${index}`}
+          className="block w-fit hover:underline"
         >
           <li>{character.name}</li>
         </Link>

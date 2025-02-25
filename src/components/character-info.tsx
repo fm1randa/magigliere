@@ -83,16 +83,18 @@ export function CharacterInfo() {
           title={data?.actor}
           width={150}
           height={150}
-          style={{
-            borderRadius: "50%",
-            marginRight: 10,
-          }}
+          className="rounded-full mr-10 w-[150] h-[150]"
         />
       )}
-      <h1>{data?.name}</h1>
+      <h1 className="text-xl font-bold">{data?.name}</h1>
       <ul>
         {Object.keys(data || {}).map((key) => {
-          if (key === "id" || key === "image" || key === "actor") {
+          if (
+            key === "id" ||
+            key === "image" ||
+            key === "actor" ||
+            key === "name"
+          ) {
             return null;
           }
           return (

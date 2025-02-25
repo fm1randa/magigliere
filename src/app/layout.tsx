@@ -15,15 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased p-4">
         <header className="mb-2 flex">
           <div>
-            <h1 className="text-2xl"> Magigliere </h1>
+            <h1 className="text-2xl font-bold"> Magigliere </h1>
             <p> A Harry Potter hub </p>
           </div>
           <Navbar />
         </header>
-        <hr />
+        <hr className="mb-3" />
         <main>
           <Providers>{children}</Providers>
         </main>
