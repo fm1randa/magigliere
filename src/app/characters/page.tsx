@@ -15,7 +15,7 @@ export default function Characters() {
   return (
     <>
       <div className="flex flex-row gap-8 items-center">
-        <h1 className="text-xl font-bold font-harry-beast-display">
+        <h1 className="text-xl font-bold font-harry-beast-display text-golden-ochre">
           Characters
         </h1>
         <div className="flex gap-2">
