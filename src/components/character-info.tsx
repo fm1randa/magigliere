@@ -75,15 +75,15 @@ export function CharacterInfo() {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center justify-center grow">
+    <div className="flex flex-col gap-4 items-center justify-center w-[1000px] h-full pr-60 pl-60 pt-20 pb-44 bg-[url(/images/papyrus.png)] bg-contain bg-no-repeat bg-center">
       {data?.image && (
         <Image
           src={data?.image}
           alt={data?.actor ?? "Unknown actor"}
           title={data?.actor}
-          width={300}
-          height={300}
-          className="rounded-full w-[300px] h-[300px] object-cover"
+          width={250}
+          height={250}
+          className="rounded-full w-[250px] h-[250px] object-cover"
         />
       )}
       <h1 className="text-xl font-bold font-harry-beast-display text-golden-ochre">
@@ -100,8 +100,8 @@ export function CharacterInfo() {
             return null;
           }
           return (
-            <li key={key}>
-              <strong className="text-slate-gray">
+            <li key={key} className="text-gray-700">
+              <strong className="text-dark-blue">
                 {getFormattedKey(key)}:
               </strong>{" "}
               {getParsedProperty(key as keyof Character)}

@@ -28,7 +28,7 @@ export default function RootLayout({
           <Navbar />
         </header>
         <hr className="mb-3" />
-        <main className="flex flex-col grow">
+        <main className="flex flex-col grow items-center">
           <Providers>{children}</Providers>
         </main>
       </body>
